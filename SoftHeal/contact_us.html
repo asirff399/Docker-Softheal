@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Toast -->
+  <div class="w-full mx-auto">
+    <div id="error-container" class="fixed top-24 left-1/2 transform -translate-x-1/2 bg-gray-200 shadow-2xl text-gray-800 mx-auto p-4 rounded-md hidden"
+        role="alert">
+        <span id="error" class="text-center font-bold font-mono tracking-wide"></span>
+    </div>
+  </div>
+  
+  <!-- Contact Us -->
+  <div class="bg-slate-100 border border-gray-300 rounded-lg font-[sans-serif] lg:m-16" >
+    <h2 class="text-4xl mt-11 text-center font-extrabold font-mono text-gray-800">CONTACT US</h2>
+    <div class="flex flex-wrap lg:flex-nowrap justify-center items-center gap-6 lg:gap-24 my-16 mx-5 lg:mx-0">
+
+        <div class="z-10 relative lg:col-span-2">
+          <img src="https://i.ibb.co.com/bKZmskW/Customer-Service.jpg" class="w-[480px] object-contain block mx-auto rounded-lg shadow-xl" />
+        </div>
+
+        <div class="max-w-[400px] max-lg:mb-6 ">     
+            <form id="contact-us" onsubmit="contactUs(event)" class="mx-auto mt-8 bg-white rounded-lg p-6 shadow-md space-y-4">
+              <input type='text' id="name" name="name" placeholder='Name' class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none" />
+              <input type='email' id="email" name="email" placeholder='Email' class="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none" />
+              <textarea placeholder='Message' id="body" name="body" rows="6" class="w-full rounded-md px-6 bg-[#f0f1f2] text-sm pt-3 outline-none"></textarea>
+              <button type='submit'
+                  class="text-gray-800 bg-green-200 hover:bg-green-300 font-semibold rounded-md text-sm px-6 py-3 block w-full">Send
+                  Message</button>
+            </form>
+        </div>
+       
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer" class="w-full"></div>
+  
+  <!-- Scripts -->
+  <script src="./app.js"></script>
+  <script src="./auth.js"></script>
+  <script src="./base.js"></script>
+ 
+</body>
+</html>
+
